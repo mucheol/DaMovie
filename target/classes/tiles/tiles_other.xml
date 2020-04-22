@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="otherLayout" template="/WEB-INF/views/common/other_layout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/common/header_other.jsp"></put-attribute>
+		<put-attribute name="l_side" value="/WEB-INF/views/common/l_side.jsp"></put-attribute>
+		<put-attribute name="r_side" value="/WEB-INF/views/common/r_side.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+	
+	<definition	name="servicecenter" extends="otherLayout">
+		<put-attribute name="title" value="고객센터"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/main/servicecenter.jsp"></put-attribute>
+	</definition>
+
+
+	<definition	name="review" extends="otherLayout">
+		<put-attribute name="title" value="리뷰페이지"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/review/review.jsp"></put-attribute>
+	</definition>
+
+
+	<definition	name="mypage" extends="otherLayout">
+		<put-attribute name="title" value="마이페이지"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/member/mypage.jsp"></put-attribute>
+	</definition>
+	
+	<definition	name="info" extends="otherLayout">
+		<put-attribute name="title" value="프로필이미지"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/member/memberUpdateView.jsp"></put-attribute>
+	</definition>
+	
+	
+	
+	
+</tiles-definitions>
