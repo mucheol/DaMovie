@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="customerLayout" template="/WEB-INF/views/customer/empty.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/customer/customer_header.jsp"></put-attribute>
+		<put-attribute name="side" value="/WEB-INF/views/customer/customer_side.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+
+
+	<definition name="header" extends="customerLayout">
+		<put-attribute name="title" value="헤더"></put-attribute>
+        <put-attribute name="header" value="/WEB-INF/views/customer/customer_header.jsp"></put-attribute>
+    </definition>
+    
+	<definition name="side" extends="customerLayout">
+		<put-attribute name="title" value="사이드"></put-attribute>
+        <put-attribute name="side" value="/WEB-INF/views/customer/customer_side.jsp"></put-attribute>
+    </definition>
+    
+	<definition name="/customer/customer" extends="customerLayout">
+		<put-attribute name="title" value="서브관리자메인페이지"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/customer/customer.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="/customer/customerUpdate" extends="customerLayout">
+		<put-attribute name="title" value="서브업데이트페이지"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/customer/customerUpdate.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="/customer/customerMovie" extends="customerLayout">
+		<put-attribute name="title" value="서브영화업데이트"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/customer/customerMovie.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="/customer/customerTime" extends="customerLayout">
+		<put-attribute name="title" value="서브시간업데이트"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/customer/customerTime.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="/customer/customerSeat" extends="customerLayout">
+		<put-attribute name="title" value="서브시간업데이트"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/customer/customerSeat.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="/customer/customerConfirm" extends="customerLayout">
+		<put-attribute name="title" value="확인"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/customer/customerConfirm.jsp"></put-attribute>
+    </definition>
+ 
+    <definition name="/customer/customerConfirmTime" extends="customerLayout">
+    	<put-attribute name="title" value="서브시간확인"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/customer/customerConfirmTime.jsp"></put-attribute>
+    </definition>
+
+    <definition name="/customer/check_customerMovie" extends="customerLayout">
+		<put-attribute name="title" value="영화확인"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/customer/check_customerMovie.jsp"></put-attribute>
+    </definition>
+    
+       <definition name="/customer/check_customerSeat" extends="customerLayout">
+		<put-attribute name="title" value="좌석확인"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/customer/check_customerSeat.jsp"></put-attribute>
+    </definition>
+
+</tiles-definitions>
